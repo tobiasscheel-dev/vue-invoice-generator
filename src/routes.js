@@ -1,7 +1,6 @@
 import Home from 'components/Home/home';
-import Posts from 'components/Posts/posts';
-import Post from 'components/Posts/post';
-import CreatePost from 'components/Posts/createPost';
+import Invoice from 'components/Invoice/invoice';
+import Impressum from 'components/Impressum/impressum';
 import EditPost from 'components/Posts/editPost';
 import NotFound from 'components/NotFound/notFound';
 
@@ -11,18 +10,14 @@ const routes = [
     component: Home
   },
   {
-    path: '/posts',
-    component: Posts
+    path: '/invoice',
+    name: 'invoice',
+    component: Invoice
   },
   {
-    path: '/posts/create',
-    name: 'createPost',
-    component: CreatePost
-  },
-  {
-    path: '/post/:id',
-    name: 'post',
-    component: Post
+    path: '/impressum',
+    name: 'impressum',
+    component: Impressum
   },
   {
     path: '/post/:id/edit',

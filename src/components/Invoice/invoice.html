@@ -1,0 +1,127 @@
+<div class="invoice-box">
+  <div class="row">
+    <div class="col-print-9">
+      <div class="invoice-head">
+        <input type="text" class="subheading" value="Muster GmbH · Musterpostfach 12 · 12345 Musterstadt"><br><br>
+        <input type="text" class="headline" value="Rechnung"><br>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="col-print-1"></div>
+    <div class="col-print-2"><img src="~assets/images/logo.jpg" class="logo"></div>
+  </div>
+  <br>
+  <div class="row invoice-address">
+    <div class="col-print-7">
+      <input type="text" class="sender" value="Muster GmbH · Musterpostfach 12 · 12345 Musterstadt"><br>
+      <input type="text" class="receiver" value="Max Mustermann"><br>
+      <input type="text" class="receiver" value="Musterstrasse 123"><br>
+      <input type="text" class="receiver" value="12345 Musterstadt"><br>
+    </div>
+    <div class="col-print-1"></div>
+    <div class="col-print-4 contact">
+      <span class="font-weight-bold">Kontakt</span> <i class="ml-3"></i><br>
+      <p>
+        <input type="text" value="+49 160 1234567" class="contact"><i class="fa fa-phone ml-2"></i><br>
+        <input type="text" value="max@muster.de" class="contact"><i class="fa fa-envelope-o ml-2"></i><br>
+        <input type="text" value="www.mustermann.de" class="contact"><i class="fa fa-globe ml-2"></i>
+      </p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row invoice-details">
+    <div class="col-print-8">
+      <span>Rechnungsnummer: </span> <input type="text" class="invoice-number" value="2018/0001"><br>
+      <span class="small text-muted">Bei Zahlung bitte angeben!</span>
+    </div>
+    <div class="col-print-4 text-right">
+      <input type="text" class="invoice-date" value="31.01.2018">
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <input type="text" class="textarea" value="Ich bedanke mich für die Zusammenarbeit und stelle Ihnen vereinbarungsgemäß folgende Lieferungen und Leistungen in Rechnung:">
+  </div>
+  <div class="row invoice-items-header">
+    <div class="col-print-1 text-center">
+      <span>Pos.</span>
+    </div>
+    <div class="col-print-7">
+      <span>Bezeichnung</span>
+    </div>
+    <div class="col-print-1 text-center">
+      <span>Menge</span>
+    </div>
+    <div class="col-print-1 text-right">
+      <span>Einzel €</span>
+    </div>
+    <div class="col-print-2 text-right">
+      <span>Gesamt €</span>
+    </div>
+  </div>
+  <div class="row invoice-items">
+    <div class="col-print-1 text-center">
+      <span>1</span>
+    </div>
+    <div class="col-print-7">
+      <span>Vue.JS Programmierung</span>
+    </div>
+    <div class="col-print-1 text-center">
+      <span>12 Std.</span>
+    </div>
+    <div class="col-print-1 text-right">
+      <span>60,00</span>
+    </div>
+    <div class="col-print-2 text-right">
+      <span>720,00</span>
+    </div>
+  </div>
+  <div class="row dont-print">
+    <div class="col-print-2"></div>
+    <div class="col-print-3 text-center">
+      <button class="btn btn-success button"><i class="fa fa-plus mr-2"></i>Zeile hinzufügen</button>
+    </div>
+    <div class="col-print-2"></div>
+    <div class="col-print-3 text-center">
+      <button class="btn btn-danger button"><i class="fa fa-trash mr-2"></i>Letzte Zeile löschen</button>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-print-3">
+      <input type="text" class="invoice-input invoice-fahrt-input" value="">
+    </div>
+    <div class="col-print-3">
+      <input type="text" class="invoice-input invoice-fahrt-input" value="">
+    </div>
+    <div class="col-print-3 ">
+      <input type="text" class="invoice-input invoice-fahrt-input" value="">
+    </div>
+    <div class="col-print-3 text-right" style="padding-right: 10px;">
+      <input type="text" class="invoice-input invoice-head-input" value="">
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-print-12" style="height: 1px; border: none; border-bottom: solid black 1px;"></div>
+  </div>
+  <div class="row">
+    <div class="col-print-6 small">
+      <span>MwSt. <input type="text" class="invoice-input invoice-mwst-input">% im Endbetrag enthalten</span>
+    </div>
+    <div class="col-print-3 small">
+      <span><input type="text" class="invoice-input invoice-mwstsumme-input"> €</span>
+    </div>
+    <div class="col-print-3 text-right" style="padding-right: 10px;">
+      <span class="font-weight-bold"><input type="text" class="invoice-input invoice-head-input font-weight-bold"> €</span><br>
+      <div class="text-right small text-muted"><span>Endbetrag inkl. MwSt.</span></div>
+    </div>
+  </div>
+  <div class="row invoice-footer">
+    <div class="col-print-12 text-center" style="margin: auto;">
+      <span>Steuernummer: <b class="text-muted">326/5185/1137</b> &middot; USt-ID-Nummer: <b class="text-muted">79 586 334 218</b></span><br>
+      <span>Sparkasse Steinheim: <b class="text-muted">DE61 4725 1550 0006 0497 61</b> &middot; <b class="text-muted">WELADED1HXB</b></span>
+    </div>
+  </div>
+</div>
+  

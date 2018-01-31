@@ -1,0 +1,228 @@
+body {
+  background-color: #efefef;
+}
+
+.colors {
+  color: rgba(236, 181, 78, 1);
+  background-color: rgba(1, 179, 181, 1);
+}
+
+.logo {
+  margin-top: -40px;
+  width: 170px;
+  height: 170px;
+}
+
+.invoice-head {
+  font-weight: bold;
+}
+
+.headline {
+  color: #767676 !important;
+  font-size: 18px;
+  line-height: 220%;
+}
+
+.subheading {
+  color: rgba(1, 179, 181, 1);
+  font-size: 12px;
+}
+
+input.subheading, input.headline {
+  width: 100%;
+  font-weight: bold;
+}
+
+.line {
+  height: 6px;
+  border: none;
+  border-top: 2px solid #767676;
+  border-bottom: 2px solid #9a9a9a;
+}
+
+.invoice-box {
+  width: 936px;
+  height: 1150px;
+  margin: auto;
+  padding: 100px;
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+  color: #555;
+  background-color: #fff;
+}
+
+.invoice-address {
+  padding-left: 20px;
+}
+
+.sender {
+  font-size: 9px;
+  text-decoration: underline;
+  width: 250px;
+}
+
+.receiver {
+  font-size: 13px;
+  width: 250px;
+}
+
+.contact {
+  text-align: right;
+  font-size: 12px;
+  width: 220px;
+}
+
+.invoice-box input {
+  background: transparent;
+  border: none;
+  color: #555;
+}
+
+.invoice-details {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.invoice-number {
+  padding-left: 5px;
+}
+
+.invoice-date {
+  text-align: right;
+  padding-right: 5px;
+  width: 200px;
+}
+
+.textarea {
+  width: 100%;
+  resize: none;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.invoice-items-header, .invoice-items {
+  border-left: 1px solid black;
+}
+
+.invoice-items-header div, .invoice-items div {
+  padding: 5px;
+  border: 1px solid black;
+  border-left: none;
+}
+
+.invoice-items-header div {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.invoice-items div {
+  font-size: 12px;
+  border-top: none;
+}
+
+.button {
+  font-size: 12px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.invoice-content {
+  padding: 40px;
+}
+
+.invoice-input {
+  background: transparent;
+  border: none;
+}
+
+.invoice-head-input {
+  width: 100px;
+  text-align: right;
+  color: #555;
+}
+
+.invoice-fahrt-input {
+  width: 100%;
+  text-align: left;
+  color: #555;
+}
+
+.invoice-mwst-input {
+  width: 20px;
+  padding-right: 2px;
+  text-align: right;
+  color: #555;
+}
+
+.invoice-mwstsumme-input {
+  width: 50px;
+  padding-right: 2px;
+  text-align: right;
+  color: #555;
+}
+
+.invoice-address-input {
+  width: 250px;
+  padding-left: 10px;
+  text-align: left;
+  color: #555;
+}
+
+.invoice-footer {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 736px;
+}
+
+.storck {
+  color: rgb(149, 55, 53);
+}
+
+.storck-large {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 130%;
+}
+
+.gesamt-tabledata {
+  padding-bottom: 5px !important;
+}
+
+@for $i from 1 through 12 {
+  .col-print-#{$i} {
+      width: #{percentage(round($i*8.33)/100)};
+      float: left;
+  }
+}
+
+@media print {
+
+  
+
+  body * {
+    visibility: hidden;
+  }
+  .invoice-box * {
+    visibility: visible;
+  }
+  .invoice-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .dont-print * {
+    visibility: hidden;
+  }
+  
+  @page {
+    size: auto;   /* auto is the initial value */
+    margin-top: 13mm;  /* this affects the margin in the printer settings */
+    margin-left: 7mm;
+    margin-bottom: 11mm;
+    margin-right: 7mm;
+  }
+}
