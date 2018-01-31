@@ -2,16 +2,14 @@ import Vue from 'vue';
 
 import template from './invoice.html';
 
-const animation = 'flipInX';
-const animationDelay = 25; // in ms
-
 export default Vue.extend({
   template,
 
   data() {
     return {
       postsFilter: '',
-      posts: []
+      posts: [],
+      numberOfRows: 1
     };
   },
 
@@ -26,22 +24,13 @@ export default Vue.extend({
   },
 
   methods: {
-    fetchPosts(){
-      console.log('fresh D')
+    addRow () {
+      console.log('add Row')
+      this.numberOfRows += 1
     },
-
-    // Methods for transitions
-    handleBeforeEnter(el) {
-      el.style.opacity = 0;
-      el.classList.add('animated');
-    },
-
-    handleEnter(el) {
-      const delay = el.dataset.index * animationDelay;
-      setTimeout(() => {
-        el.style.opacity = 1;
-        el.classList.add(animation);
-      }, delay);
+    removeRow () {
+      console.log('remove Row')
+      this.numberOfRows -= 1
     }
   }
 });

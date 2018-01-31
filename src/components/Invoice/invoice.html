@@ -59,9 +59,9 @@
       <span>Gesamt €</span>
     </div>
   </div>
-  <div class="row invoice-items">
+  <div class="row invoice-items" v-for="index in numberOfRows">
     <div class="col-print-1 text-center">
-      <span>1</span>
+      <span>{{ index }}</span>
     </div>
     <div class="col-print-7">
       <span>Vue.JS Programmierung</span>
@@ -79,11 +79,11 @@
   <div class="row dont-print">
     <div class="col-print-2"></div>
     <div class="col-print-3 text-center">
-      <button class="btn btn-success button"><i class="fa fa-plus mr-2"></i>Zeile hinzufügen</button>
+      <button v-on:click="addRow()" class="btn btn-success button"><i class="fa fa-plus mr-2"></i>Zeile hinzufügen</button>
     </div>
     <div class="col-print-2"></div>
     <div class="col-print-3 text-center">
-      <button class="btn btn-danger button"><i class="fa fa-trash mr-2"></i>Letzte Zeile löschen</button>
+      <button v-on:click="removeRow()" class="btn btn-danger button"><i class="fa fa-trash mr-2"></i>Letzte Zeile löschen</button>
     </div>
   </div>
   <br>
