@@ -8,9 +8,9 @@ body {
 }
 
 .logo {
-  margin-top: -40px;
-  width: 170px;
-  height: 170px;
+  margin-left: 75px;
+  width: 140px;
+  height: 140px;
 }
 
 .invoice-head {
@@ -19,7 +19,7 @@ body {
 
 .headline {
   color: #767676 !important;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 220%;
 }
 
@@ -44,7 +44,10 @@ input.subheading, input.headline {
   width: 936px;
   height: 1150px;
   margin: auto;
-  padding: 100px;
+  padding-top: 0px;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 0px;
   border: 1px solid #eee;
   box-shadow: 0 0 10px rgba(0, 0, 0, .15);
   font-size: 16px;
@@ -103,6 +106,59 @@ input.subheading, input.headline {
   margin-bottom: 20px;
 }
 
+.description {
+  width: 100%;
+  font-weight: bold;
+}
+
+.amount {
+  width: 100%;
+  text-align: center;
+}
+
+.summe {
+  width: 100%;
+  text-align: right;
+}
+
+.summegesamt {
+  width: 100%;
+  text-align: right;
+  font-weight: bold;
+}
+
+.kleinunternehmer {
+  width: 100%;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.additionaltext {
+  width: 100%;
+  font-size: 13px;
+  color: #555;
+  height: 150px;
+  resize: none;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+}
+
+.greeting {
+  width: 100%;
+  font-size: 13px;
+}
+
+.footer {
+  visibility: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 734px;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
 .invoice-items-header, .invoice-items {
   border-left: 1px solid black;
 }
@@ -136,7 +192,7 @@ input.subheading, input.headline {
 
 
 .invoice-content {
-  padding: 40px;
+  padding: 0px;
 }
 
 .invoice-input {
@@ -223,12 +279,16 @@ input.subheading, input.headline {
   .dont-print * {
     visibility: hidden;
   }
+
+  .do-print * {
+    visibility: visible;
+  }
   
   @page {
     size: auto;   /* auto is the initial value */
-    margin-top: 13mm;  /* this affects the margin in the printer settings */
+    margin-top: 10mm;  /* this affects the margin in the printer settings */
     margin-left: 7mm;
-    margin-bottom: 11mm;
+    margin-bottom: 10mm;
     margin-right: 7mm;
   }
 }

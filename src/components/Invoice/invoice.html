@@ -2,18 +2,17 @@
   <div class="row">
     <div class="col-print-9">
       <div class="invoice-head">
-        <input type="text" class="subheading" value="Muster GmbH · Musterpostfach 12 · 12345 Musterstadt"><br><br>
+        <input type="text" class="subheading" value="Tobias Scheel · Bornebrucher Weg 123 · 32839 Steinheim"><br><br><br>
         <input type="text" class="headline" value="Rechnung"><br>
       </div>
       <div class="line"></div>
     </div>
-    <div class="col-print-1"></div>
-    <div class="col-print-2"><img src="~assets/images/logo.jpg" class="logo"></div>
+    <div class="col-print-2"><img src="~assets/images/logo3.png" class="logo"></div>
   </div>
   <br>
   <div class="row invoice-address">
     <div class="col-print-7">
-      <input type="text" class="sender" value="Muster GmbH · Musterpostfach 12 · 12345 Musterstadt"><br>
+      <input type="text" class="sender" value="Tobias Scheel · Bornebrucher Weg 123 · 32839 Steinheim"><br>
       <input type="text" class="receiver" value="Max Mustermann"><br>
       <input type="text" class="receiver" value="Musterstrasse 123"><br>
       <input type="text" class="receiver" value="12345 Musterstadt"><br>
@@ -22,9 +21,9 @@
     <div class="col-print-4 contact">
       <span class="font-weight-bold">Kontakt</span> <i class="ml-3"></i><br>
       <p>
-        <input type="text" value="+49 160 1234567" class="contact"><i class="fa fa-phone ml-2"></i><br>
-        <input type="text" value="max@muster.de" class="contact"><i class="fa fa-envelope-o ml-2"></i><br>
-        <input type="text" value="www.mustermann.de" class="contact"><i class="fa fa-globe ml-2"></i>
+        <input type="text" value="+49 151 46657655" class="contact"><i class="fa fa-phone ml-2"></i><br>
+        <input type="text" value="tobias@spire.de" class="contact"><i class="fa fa-envelope-o ml-2"></i><br>
+        <input type="text" value="www.tobiasscheel.de" class="contact"><i class="fa fa-globe ml-2"></i>
       </p>
     </div>
   </div>
@@ -35,7 +34,7 @@
       <span class="small text-muted">Bei Zahlung bitte angeben!</span>
     </div>
     <div class="col-print-4 text-right">
-      <input type="text" class="invoice-date" value="31.01.2018">
+      <input type="text" class="invoice-date" value="05.02.2018">
     </div>
   </div>
   <br>
@@ -64,16 +63,33 @@
       <span>{{ index }}</span>
     </div>
     <div class="col-print-7">
-      <span>Vue.JS Programmierung</span>
+      <input type="text" class="description" value="Softwareentwicklung: Taxi-Verwaltung - Krankenkassen + Rechnungserstellung">
     </div>
     <div class="col-print-1 text-center">
-      <span>12 Std.</span>
+      <input type="text" class="amount" value="1">
     </div>
     <div class="col-print-1 text-right">
-      <span>60,00</span>
+      <input type="text" class="summe" value="600,00">
     </div>
     <div class="col-print-2 text-right">
-      <span>720,00</span>
+      <input type="text" class="summe" value="600,00">
+    </div>
+  </div>
+  <div class="row invoice-items">
+    <div class="col-print-1 text-center">
+      <span></span>
+    </div>
+    <div class="col-print-7">
+      <input type="text" class="description" value="Gesamt">
+    </div>
+    <div class="col-print-1 text-center">
+      <input type="text" class="amount" value="">
+    </div>
+    <div class="col-print-1 text-right">
+      <input type="text" class="summe" value="">
+    </div>
+    <div class="col-print-2 text-right">
+      <input type="text" class="summegesamt" value="720,00">
     </div>
   </div>
   <div class="row dont-print">
@@ -86,41 +102,28 @@
       <button v-on:click="removeRow()" class="btn btn-danger button"><i class="fa fa-trash mr-2"></i>Letzte Zeile löschen</button>
     </div>
   </div>
-  <br>
-  <div class="row">
-    <div class="col-print-3">
-      <input type="text" class="invoice-input invoice-fahrt-input" value="">
-    </div>
-    <div class="col-print-3">
-      <input type="text" class="invoice-input invoice-fahrt-input" value="">
-    </div>
-    <div class="col-print-3 ">
-      <input type="text" class="invoice-input invoice-fahrt-input" value="">
-    </div>
-    <div class="col-print-3 text-right" style="padding-right: 10px;">
-      <input type="text" class="invoice-input invoice-head-input" value="">
+  <div class="row col-print-12">
+    <input type="text" class="kleinunternehmer" value="Gemäß § 19 UStG enthält der ausgewiesene Betrag keine Umsatzsteuer.">
+  </div><br>
+  <div class="row col-print-12">
+    <div class="col-print-12">
+      <textarea class="additionaltext">Abschließende Änderungen oder Fehlerbehebungen, die bis zum 31.03.2018 erkannt und bemängelt werden, werden von mir kostenfrei behoben.
+          Änderungen an der Software die nach dem 31.03.2018 gewünscht werden, stelle ich mit einem Stundensatz von 50€ (brutto) in Rechnung.
+          Bitte überweisen Sie den ausgewiesenen Gesamtbetrag auf das unten stehende Konto.</textarea>
     </div>
   </div>
   <br>
-  <div class="row">
-    <div class="col-print-12" style="height: 1px; border: none; border-bottom: solid black 1px;"></div>
+  <div class="row col-print-7">
+    <input type="text" class="greeting" value="Mit freundlichen Grüßen">
   </div>
-  <div class="row">
-    <div class="col-print-6 small">
-      <span>MwSt. <input type="text" class="invoice-input invoice-mwst-input">% im Endbetrag enthalten</span>
-    </div>
-    <div class="col-print-3 small">
-      <span><input type="text" class="invoice-input invoice-mwstsumme-input"> €</span>
-    </div>
-    <div class="col-print-3 text-right" style="padding-right: 10px;">
-      <span class="font-weight-bold"><input type="text" class="invoice-input invoice-head-input font-weight-bold"> €</span><br>
-      <div class="text-right small text-muted"><span>Endbetrag inkl. MwSt.</span></div>
-    </div>
+  <div class="row col-print-7">
+    <br><br><br><br><br><br>
+    <input type="text" class="greeting" value="Tobias Scheel">
   </div>
-  <div class="row invoice-footer">
+  <div class="row col-print-12 footer">
     <div class="col-print-12 text-center" style="margin: auto;">
-      <span>Steuernummer: <b class="text-muted">326/5185/1137</b> &middot; USt-ID-Nummer: <b class="text-muted">79 586 334 218</b></span><br>
-      <span>Sparkasse Steinheim: <b class="text-muted">DE61 4725 1550 0006 0497 61</b> &middot; <b class="text-muted">WELADED1HXB</b></span>
+      <span>Steuernummer: <b class="text-muted">326/2411/1433</b> &middot; USt-ID-Nummer: <b class="text-muted">90 287 419 539</b></span><br>
+      <span>Vereinigte Volksbank eG: <b class="text-muted">DE67 4726 4367 4050 2574 06</b> &middot; <b class="text-muted">GENODEM1STM</b></span>
     </div>
   </div>
 </div>
